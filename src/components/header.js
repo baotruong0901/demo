@@ -27,13 +27,15 @@ const Header=()=> {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand to="/"><img className='logo' src={logo}/></Navbar.Brand>
+        <Navbar.Brand >
+                
+            <NavLink to='/'>
+                <img className='logo' src={logo} />
+            </NavLink>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {/* <NavLink to="/" className='nav-link'>Home</NavLink>
-            <NavLink to="/admin" className='nav-link'>Admin</NavLink>
-            <NavLink to="/users" className='nav-link'>Users</NavLink> */}
             {
                 menuData.map((item)=>(
                     <NavLink to={item.path} className='nav-link'>
